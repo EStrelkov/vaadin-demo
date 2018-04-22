@@ -1,9 +1,6 @@
 package com.gp.vaadin.hotel_demo.model;
 
-import java.io.Serializable;
-import java.time.LocalDate;
-
-public class Hotel implements Serializable, Cloneable {
+public class Hotel implements IdentifiedObject {
 
 	/**
 	 * 
@@ -16,13 +13,13 @@ public class Hotel implements Serializable, Cloneable {
 
 	private String address = "";
 
-	private String rating;
+	private Integer rating = 0;
 
-	private LocalDate operatesFrom;
+	private Long operatesFrom;
 
-	private HotelCategory category;
+	private Long categoryId;
 	
-	private String url;
+	private String url = "";
 	
 	private String description;
 
@@ -68,29 +65,29 @@ public class Hotel implements Serializable, Cloneable {
 		this.address = address;
 	}
 
-	public String getRating() {
+	public Integer getRating() {
 		return rating;
 	}
 
-	public void setRating(String rating) {
+	public void setRating(Integer rating) {
 		this.rating = rating;
 	}
 
-	public LocalDate getOperatesFrom() {
+	public Long getOperatesFrom() {
 		return operatesFrom;
 	}
 
-	public void setOperatesFrom(LocalDate operatesFrom) {
+	public void setOperatesFrom(Long operatesFrom) {
 		this.operatesFrom = operatesFrom;
 	}
 
-	public HotelCategory getCategory() {
-		return category;
+	public Long getCategoryId() {
+		return categoryId;
 	}
 
-	public void setCategory(HotelCategory category) {
-		this.category = category;
-	}	
+	public void setCategoryId(Long categoryId) {
+		this.categoryId = categoryId;
+	}
 
 	public String getUrl() {
 		return url;

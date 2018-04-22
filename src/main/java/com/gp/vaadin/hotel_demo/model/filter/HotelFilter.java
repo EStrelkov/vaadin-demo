@@ -1,6 +1,6 @@
 package com.gp.vaadin.hotel_demo.model.filter;
 
-public class HotelFilter {
+public class HotelFilter implements Filter {
 
 	private final String name;
 	
